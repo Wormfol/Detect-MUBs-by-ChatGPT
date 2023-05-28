@@ -1,0 +1,48 @@
+C1(S1). price oracle manipulation
+Analyze the potential for price oracle manipulation in the following smart contract, focusing on how price is calculated or external data is fetched and used in the contract's functions. Respond with the following form for all your findings:
+price manipulation: yes/no
+function name: 
+sequnce: 1/2...
+explanation: 
+
+C2(S6). Erroneous accounting.
+To identify erroneous accounting bugs in the following smart contracts like incorrect order of calculations, cases with unexpected values or deviating semantics, and the use of incorrect variables etc. Respond with the following form for all your findings:
+bug type:
+Exist: yes/no
+function name: 
+sequnce: 1/2...
+explanation: 
+
+
+C3(S2&S5). ID uniqueness violations & access control
+Please identify inappropriate access control issues like privilege escalation, unrestricted function calls and "ID-related violations" vulnerabilities in the following smart contract. Respond with the following form for all your findings:
+bug type:
+Exist: yes/no
+function name: 
+sequnce: 1/2...
+explanation: 
+
+C4(S3). Erroneous state updates
+Please check whether the functions properly update the states, and if there are any other issues that could lead to incorrect state updates or other vulnerabilities in the smart contract. Respond with the incorrect update states functions as the following form for all your findings:
+bug type:
+Exist: yes/no
+function name: 
+sequnce: 1/2...
+explanation: 
+
+C5(S4&SE). Atomicity violations and broken business models
+Please analyze the following smart contract and identify potential vulnerabilities related to the broken business models like: Business-flow atomicity violations, Unexpected function invocation arguments, sequences or frequncies, Unexpected environment or contract conditions (e.g., ChainLink returning outdated data or significant slippage occurring). Respond with the following form for all your findings:
+bug type:
+Exist: yes/no
+function name: 
+sequnce: 1/2...
+explanation: 
+
+C6(SC). implementation specific bugs
+Please analyze the following smart contract and identify potential vulnerabilities related to incorrect implementations. Respond with the following form for all your findings:
+bug type:
+Exist: yes/no
+function name: 
+sequnce: 1/2...
+explanation: 
+
