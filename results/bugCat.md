@@ -62,3 +62,21 @@ We further extend the six main categories with subcategories, which provide a mo
     + __SE-3__: A given function is invoked multiple times unexpectedly.
     + __SE-4__: Unexpected function arguments.
 + __C6__: Contract implementation-specific bugs.
+
+
+### Bugs with Simple and General Testing Oracles
+
+These kinds of bugs are also derived from [Web3Bugs](https://github.com/ZhangZhuoSJTU/Web3Bugs/blob/main/docs/standard.md), which can be detected using simple and general oracles and do not require an in-depth understanding of the code semantics. We update several ones according to our requirement.
+
++ __L1__: Reentrancy.
++ __L2__: Rounding issues or precision loss.
++ __L3__: Bugs that are caused by using uninitialized variables.
++ __L4__: Bugs that are caused by exceeding the gas limitation.
++ __L5__: Storage collision and confusion between proxy and implementation.
++ __L6__: Arbitrary external function call.
++ __L7__: Integer overflow and underflow.
++ __L8__: Unchecked return value by low-level call and other function calls.
++ __L9__: Bugs that are caused by writing to memory that does not apply to the storage.
++ __LA__: Cryptographic issues.
++ __LB__: Using `tx.origin`.
++ __LC__: Using `timestamp`.
