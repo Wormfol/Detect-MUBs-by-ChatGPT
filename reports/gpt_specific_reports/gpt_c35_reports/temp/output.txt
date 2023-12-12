@@ -1,0 +1,16 @@
+103_3	null
+103_3	null
+103_3	null
+103_3	null
+103_3	null
+103_2	null
+103_2	null
+103_2	null
+103_2	null
+103_2	1	initCbridge	Privilege escalation	The `initCbridge` function can only be called by the contract owner due to the `LibDiamond.enforceIsContractOwner()` function call. This is not necessarily a bug, but it does provide the contract owner with privileged access to set the cBridge address and the cBridge chain ID. If the contract owner is compromised, an attacker could potentially change these values to manipulate the functionality of the contract.
+103_1	1	`startBridgeTokensViaCBridge`, `swapAndStartBridgeTokensViaCBridge`	Unrestricted Function Calls 	The internal function `_startBridge` has unrestricted function calls to the ICBridge contract methods `sendNative` and `send`. It does not validate the status of these operations or the `ICBridge` address, potentially allowing for reentrancy attacks or failed transactions.
+103_1	2	`swapAndStartBridgeTokensViaCBridge`	ID-related Violations 	Both the `startBridgeTokensViaCBridge` and `swapAndStartBridgeTokensViaCBridge` functions require the caller to input the `_cBridgeData` (including the `token` address) and do not check whether the token is allowed or if it exists in a specific list. An attacker might potentially pass a malicious token contract. It's always safer to use a mapping or an array to manage the token list.
+103_1	1	`swapTokensGeneric`	Unrestricted Function Calls 	The function `swapTokensGeneric` makes an unrestricted function call to the `_executeSwaps` function, which is part of the `Swapper` contract, not provided here. The `_executeSwaps` function could potentially have unrestricted function calls which could lead to security vulnerabilities like reentrancy attacks.
+103_1	1	`initNXTP`	Privilege Escalation 	The `initNXTP` function allows the contract owner to set the `_txMgrAddr` which is used as the transaction manager. It checks if the caller is the contract owner using `LibDiamond.enforceIsContractOwner()`. However, this function is missing a `onlyOwner` modifier or equivalent access control, potentially allowing unauthorized users to change the transaction manager address. The method of verifying contract ownership isn't directly visible in this contract and should be validated.
+103_1	null
+103_1	null
