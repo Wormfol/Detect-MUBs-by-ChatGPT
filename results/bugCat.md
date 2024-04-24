@@ -4,6 +4,20 @@ Each bug category is briefly explained first. This is followed by a more detaile
 
 Please note that our modifications to the original Web3Bugs classification serve to enhance the precision and relevance of our findings. These changes were necessitated by the unique nature of our evaluation criteria and the specificities of the bugs we investigated.
 
+## Machine Auditable Bugs (MUBs)
+| ID | Bug Name              | ID | Bug Name                |
+|----|-----------------------|----|-------------------------|
+| AF | Assertion Failure     | ME | Mishandled Exception    |
+| AW | Arbitrary Write       | PL | Precision Loss          |
+| BD | Block-state Dependency | RE | Reentrancy              |
+| CE | Compiler Error        | SC | Suicidal Contract       |
+| CH | Control-flow Hijack   | TD | Transaction-ordering Dependency |
+| EL | Ether Leak            | TO | Transaction Origin Use  |
+| FE | Freezing Ether        | UV | Uninitialized Variable |
+| GI | Gas-related Issue     | WP | Weak PRNG               |
+| IB | Integer Bug           |    |                         |
+
+
 ## Bug Categorization
 Different with the machine auditable bugs (MABs) which can be detected through simple, general oracles and do not require an in-depth understanding of the code semantics, machine unditable bugs (MUBs) present a more complex case. MUBs necessitate the use of advanced semantic oracles for detection because they originate from discrepancies between the code implementation and the intended business model. They are categorized into the following six categories in this work and may be subject to modifications in the future. These adaptations will be influenced by the performance of the Language Learning Model (LLM) in response to different prompts, as we continue to refine our understanding and detection capabilities of MUBs.
 
